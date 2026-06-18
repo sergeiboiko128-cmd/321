@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0b10;
+    color: #eaeaea;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* шапка */
+.header {
+    background: rgba(11, 11, 16, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #2a2a35;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #b388ff, #82b1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav a {
+    color: #c0c0d0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+.nav a:hover {
+    color: #ffffff;
+    border-bottom-color: #b388ff;
+}
+
+.nav .btn-outline {
+    border: 1px solid #b388ff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #b388ff;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.nav .btn-outline:hover {
+    background: #b388ff;
+    color: #0b0b10;
+    border-color: #b388ff;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.burger span {
+    width: 28px;
+    height: 3px;
+    background: #c0c0d0;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+/* hero */
+.hero {
+    padding: 60px 0 40px;
+    background: radial-gradient(circle at 70% 20%, #1f1b2e, #0b0b10 70%);
+}
+
+.hero-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1 1 300px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    background: linear-gradient(to right, #f0f0ff, #b388ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #a8a8c0;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #b388ff;
+    color: #0b0b10;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 700;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #d1b3ff;
+    transform: scale(1.02);
+}
+
+.btn-secondary {
+    border: 1px solid #4a4a5a;
+    color: #d0d0e0;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #2a2a3a;
+}
+
+.hero-visual {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-visual img {
+    max-width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid #2f2f40;
+    width: 100%;
+    height: auto;
+}
+
+/* разделы */
+.section {
+    padding: 64px 0;
+    border-bottom: 1px solid #1f1f2a;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+    color: #f0f0ff;
+}
+
+.section-title span {
+    color: #b388ff;
+}
+
+/* альбомы */
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 28px;
+}
+
+.album-card {
+    background: #15151e;
+    border-radius: 20px;
+    padding: 20px 16px 24px;
+    text-align: center;
+    border: 1px solid #262633;
+    transition: 0.25s;
+}
+
+.album-card:hover {
+    transform: translateY(-6px);
+    border-color: #b388ff;
+    box-shadow: 0 12px 24px rgba(179, 136, 255, 0.08);
+}
+
+.album-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #222;
+    margin-bottom: 12px;
+}
+
+.album-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.album-card p {
+    color: #9090aa;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* концерты */
+.concerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.concert-item {
+    background: #12121b;
+    padding: 20px 20px 24px;
+    border-radius: 20px;
+    border-left: 4px solid #b388ff;
+}
+
+.concert-item .date {
+    color: #b388ff;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.concert-item h4 {
+    margin: 8px 0 4px;
+    font-size: 20px;
+}
+
+.concert-item .place {
+    color: #9090aa;
+}
+
+/* галерея */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid #28283a;
+    transition: 0.2s;
+    filter: grayscale(0.3);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    filter: grayscale(0);
+    border-color: #b388ff;
+}
+
+/* футер */
+.footer {
+    padding: 40px 0 28px;
+    background: #08080c;
+    border-top: 1px solid #1c1c28;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-socials a {
+    color: #9090b0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.footer-socials a:hover {
+    color: #b388ff;
+}
+
+.footer-copy {
+    color: #5a5a72;
+    font-size: 14px;
+}
+
+/* адаптив */
+@media (max-width: 820px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: #13131e;
+        padding: 24px;
+        border-radius: 24px;
+        gap: 20px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        border: 1px solid #2c2c40;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .container {
+        padding: 0 16px;
+    }
+    .hero {
+        padding: 40px 0 20px;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+    .album-card h4 {
+        font-size: 16px;
+    }
+}
+
+/* доп страницы (имитация) */
+.page-indicator {
+    background: #1a1a28;
+    padding: 12px 20px;
+    border-radius: 40px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #b388ff;
+    margin-bottom: 20px;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.merch-item {
+    background: #14141e;
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #28283a;
+}
+
+.merch-item .price {
+    color: #b388ff;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.badge {
+    background: #2a1f3a;
+    color: #d4bfff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 700px) {
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .merch11{
+        height: 300px;
+    }
+}
+.merch11{
+    width:90%   ;height: auto  ;
+}

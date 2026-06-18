@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATL · атмосфера</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">ATL</a>
+            <button class="burger" id="burgerBtn" aria-label="меню">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="navMenu">
+                <a href="#albums">Альбомы</a>
+                <a href="#concerts">Концерты</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#merch" class="btn-outline">Мерч</a>
+                <a href="#about">О группе</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ГЛАВНАЯ (лендинг) -->
+    <main>
+        <!-- hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1>ATL</h1>
+                        <p>Атмосферный хип-хоп из России. Новые альбомы, живые выступления и уникальный визуальный стиль.</p>
+                        <div class="hero-actions">
+                            <a href="#albums" class="btn-primary">Слушать</a>
+                            <a href="#concerts" class="btn-secondary">Ближайшие даты</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <img src="./photo/atl.jpg" alt="ATL атмосфера">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- АЛЬБОМЫ -->
+        <section class="section" id="albums">
+            <div class="container">
+                <div class="page-indicator">✧ основная страница</div>
+                <h2 class="section-title">Альбомы <span>•</span></h2>
+                <div class="albums-grid">
+                    <div class="album-card">
+                        <img src="./photo/limb.jpg" alt="альбом">
+                        <h4>лимб</h4>
+                        <p>2017 · 11     треков</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="./photo/scalpel.jpg" alt="альбом">
+                        <h4>Скальпель</h4>
+                        <p>2024 · 11     треков</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="./photo/marabu.jpg" alt="альбом">
+                        <h4>Марабу</h4>
+                        <p>2015 · 10     треков</p>
+                    </div>
+                    <div class="album-card">
+                        <img src="./photo/123.png" alt="альбом">
+                        <h4>Радио Апокалипсис</h4>
+                        <p>2021 · 18     треков</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КОНЦЕРТЫ -->
+        <section class="section" id="concerts">
+            <div class="container">
+                <h2 class="section-title">Концерты <span>•</span></h2>
+                <div class="concerts-grid">
+                    <div class="concert-item">
+                        <div class="date">15 июня 2026</div>
+                        <h4>Москва, Live Arena</h4>
+                        <div class="place">билеты в продаже</div>
+                    </div>
+                    <div class="concert-item">
+                        <div class="date">22 июня 2026</div>
+                        <h4>Санкт-Петербург, Космонавт</h4>
+                        <div class="place">предзаказ</div>
+                    </div>
+                    <div class="concert-item">
+                        <div class="date">5 июля 2026</div>
+                        <h4>Екатеринбург, Tele-Club</h4>
+                        <div class="place">скоро</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ГАЛЕРЕЯ -->
+        <section class="section" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Фотогалерея <span>•</span></h2>
+                <div class="gallery-grid">
+                    <img src="./photo/atl1.png" alt="концерт 1">
+                    <img src="./photo/atl2.png" alt="концерт 2">
+                    <img src="./photo/atl3.jpg" alt="концерт 3">
+                    <img src="./photo/atl4.jpg" alt="концерт 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- ДОПОЛНИТЕЛЬНЫЕ СТРАНИЦЫ (встроены как разделы, но с навигацией) -->
+        <section class="section" id="merch">
+            <div class="container">
+                <div class="page-indicator">✦ страница мерча</div>
+                <h2 class="section-title">Магазин <span>•</span></h2>
+                <div class="merch-grid">
+                    <div class="merch-item">
+                        <div style="background:#1f1f2e; border-radius:12px; padding:20px 0; margin-bottom:8px;"><img class="merch11" src="./photo/f1.jpg"></div>
+                        <h4>Футболка «Аномалия»</h4>
+                        <div class="price">2 490 ₽</div>
+                        <span class="badge">в наличии</span>
+                    </div>
+                    <div class="merch-item">
+                        <div style="background:#1f1f2e; border-radius:12px; padding:20px 0; margin-bottom:8px;"><img class="merch11" src="./photo/k1.jpg"></div>
+                        <h4>Кепка ATL</h4>
+                        <div class="price">1 790 ₽</div>
+                        <span class="badge">предзаказ</span>
+                    </div>
+                    <div class="merch-item">
+                        <div style="background:#1f1f2e; border-radius:12px; padding:20px 0; margin-bottom:8px;"><img class="merch11" src="./photo/432324.webp"></div>
+                        <h4>Худи «Маргинал»</h4>
+                        <div class="price">3 990 ₽</div>
+                        <span class="badge">в наличии</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О ГРУППЕ (доп страница) -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="page-indicator">✦ история / состав</div>
+                <h2 class="section-title">О группе <span>•</span></h2>
+                <div class="two-col">
+                    <div>
+                        <p style="color:#b0b0cc; margin-bottom:20px; font-size:17px;"><strong style="color:#d0d0ff;">ATL</strong> — российский хип-хоп проект, известный своей мрачной эстетикой, глубокими текстами и экспериментальным звуком. Группа была основана в 2015 году и быстро завоевала внимание андеграундной сцены.</p>
+                        <p style="color:#9090b0;">В составе: <span style="color:#c0c0e0;">Макс (вокал, тексты)</span>, <span style="color:#c0c0e0;">Костя (биты, продакшн)</span>, <span style="color:#c0c0e0;">Дима (визуал, дизайн)</span>. За плечами 5 студийных альбомов и множество сольных концертов.</p>
+                    </div>
+                    <div style="background:#12121e; border-radius:20px; padding:24px; border:1px solid #28283a;">
+                        <h4 style="margin-bottom:12px; color:#b388ff;">Бывшие участники</h4>
+                        <ul style="list-style:none; color:#a8a8c0;">
+                            <li style="margin-bottom:8px;">▸ Андрей «SAD» (2015–2019)</li>
+                            <li style="margin-bottom:8px;">▸ Илья «DJ Fade» (2016–2020)</li>
+                            <li style="margin-bottom:0;">▸ Лена «Vox» (2018–2021)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo" style="font-size:20px;">ATL</div>
+            <div class="footer-socials">
+                <a href="#">Telegram</a>
+                <a href="#">VK</a>
+                <a href="#">YouTube</a>
+                <a href="#">Bandcamp</a>
+            </div>
+            <div class="footer-copy">© 2026 · все права защищены</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
